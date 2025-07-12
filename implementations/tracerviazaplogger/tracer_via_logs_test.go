@@ -5,13 +5,14 @@
 //  Created by karim-w on 11/07/2025.
 //
 
-package tracervialogs
+package tracerviazaplogger_test
 
 import (
 	"testing"
 	"time"
 
 	"github.com/karim-w/coreruntime/traces"
+	"github.com/karim-w/coreruntime_extensions/implementations/tracerviazaplogger"
 	"go.uber.org/zap"
 )
 
@@ -20,7 +21,7 @@ func TestTracerImpl(t *testing.T) {
 		zap.NewExample(),
 	)
 	// Initialize the tracer
-	tracer := &tracer_impl{}
+	tracer := tracerviazaplogger.Initialize()
 
 	// Create a sample trace
 	tx := traces.Span{

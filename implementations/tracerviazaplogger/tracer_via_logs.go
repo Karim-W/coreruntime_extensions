@@ -5,7 +5,7 @@
 //  Created by karim-w on 11/07/2025.
 //
 
-package tracervialogs
+package tracerviazaplogger
 
 import (
 	"time"
@@ -40,4 +40,8 @@ func (t *tracer_impl) Trace(tx traces.Span) error {
 	return nil
 }
 
-var _ runtimemodules.Tracer = &tracer_impl{}
+func Initialize() runtimemodules.Tracer {
+	return &tracer_impl{}
+}
+
+var _ runtimemodules.Tracer = (*tracer_impl)(nil)
