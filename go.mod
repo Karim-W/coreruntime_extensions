@@ -20,5 +20,6 @@ require (
 
 require (
 	github.com/karim-w/coreruntime v0.0.1
+	github.com/lib/pq v1.10.9
 	go.uber.org/multierr v1.10.0 // indirect
 )
