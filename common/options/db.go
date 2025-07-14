@@ -15,6 +15,10 @@ type SQL_Database struct {
 	PanicablePings bool
 }
 
+type Cassandra struct {
+	PanicablePings bool
+}
+
 type Redis struct {
 	PanicablePings bool
 }
